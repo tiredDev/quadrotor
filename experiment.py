@@ -3,9 +3,9 @@ import multiprocessing as mp
 
 """
     Main experiment script. We pull the experiment config parameters from file and then fire up a bunch of
-    instances, with each one running in its own thread (no communication between different instances). This 
-    lets us train multiple algorithms on the same environment at the same time. The trainer logs all of the 
-    data and saves it to the correct location, after which we can plot it all out using matplotlib or R. 
+    instances, with each one running in its own thread (no communication between different instances). This
+    lets us train multiple algorithms on the same environment at the same time. The trainer logs all of the
+    data and saves it to the correct location, after which we can plot it all out using matplotlib or R.
 
     -- Sean Morrison, 2018
 """
@@ -37,7 +37,7 @@ def make(env_name, alg):
     """
         Builds and returns an instance of a trainer for a given algorithm. All of these algorithms have been
         validated on basic tasks and shown to learn. You can edit the training parameters in the config file
-        found in the root folder. 
+        found in the root folder.
     """
 
     if alg == "cem":
@@ -75,8 +75,7 @@ def make(env_name, alg):
         import algs.ind.trpo as trpo
         print("---Initializing TRPO in env: "+env_name+"---")
         return trpo.Trainer(env_name, params)
-    
+
 
 if __name__ == "__main__":
     main(env_name, algs)
-    

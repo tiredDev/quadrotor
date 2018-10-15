@@ -9,7 +9,7 @@
 """
 ##LandPara
 exp = {
-        "env": "Land-v0",
+        "env": "BoxWorld-v0",
         "algs": ["trpo"]
         }
 
@@ -84,7 +84,7 @@ ppo = {
         "epochs": 4,
         "lr": 1e-4,
         "seed": 343,
-        "log_interval": 250,
+        "log_interval": 8000,
         "render": True,
         "save": True,
         "cuda": False,
@@ -146,7 +146,7 @@ trpo = {
                                 },
         "hidden_dim": 64,
         "iterations": 10000,
-        "log_interval": 500,
+        "log_interval": 1000,
         "warmup": 50,
         "batch_size": 128,
         "seed": 343,

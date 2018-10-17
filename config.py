@@ -10,7 +10,7 @@
 ##LandPara
 exp = {
         "env": "BoxWorld-v0",
-        "algs": ["trpo"]
+        "algs": ["ppo"]
         }
 
 cem = {
